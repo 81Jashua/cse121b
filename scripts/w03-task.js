@@ -30,9 +30,37 @@ function subtractNumbers(){
 document.querySelector('#subtractNumbers').addEventListener('click', subtractNumbers);
 
 /* Arrow Function - Multiply Numbers */
+function multiply(number1, number2){
+    return number1 * number2;
+}
 
+function multiplyNumbers(){
+    let multNumber1 = Number(document.querySelector('#factor1').value);
+    let multNumber2 = Number(document.querySelector('#factor2').value);
+
+    document.querySelector('#product').value = multiply(multNumber1, multNumber2);    
+}
+
+document.querySelector('#multiplyNumbers').addEventListener('click', multiplyNumbers);
+//document.querySelector('#subtractNumbers').addEventListener('click', (a,b) => document.querySelector('#product').value = multiply(multNumber1, multNumber2) );
 
 /* Open Function Use - Divide Numbers */
+function divide(number1, number2){
+    return number1 / number2;
+}
+
+function divideNumbers(){
+    let divNum1 = Number(document.getElementById('dividend').value);
+    let divNum2 = Number(document.getElementById('divisor').value);
+
+    document.getElementById('quotient').value = divide(divNum1, divNum2);
+}
+
+document.getElementById('divideNumbers').addEventListener('click', divideNumbers);
+
+
+
+
 
 
 /* Decision Structure */
