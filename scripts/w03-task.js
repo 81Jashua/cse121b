@@ -58,19 +58,21 @@ function divideNumbers(){
 
 document.getElementById('divideNumbers').addEventListener('click', divideNumbers);
 
-
-
-
-
-
 /* Decision Structure */
+let currentDate = new Date();
+let year = currentDate.getFullYear();
 
+document.getElementById('year').innerHTML = year;
 
 /* ARRAY METHODS - Functional Programming */
+
 /* Output Source Array */
+let numbersArray = [1,2,3,4,5,6,7,8,9,10,11,12,13];
+document.getElementById('array').innerHTML = numbersArray;
 
 /* Output Odds Only Array */
-
+let odds = numbersArray.filter((n) => n % 2 == 1)
+document.getElementById('odds').innerHTML = odds;
 /* Output Evens Only Array */
 
 /* Output Sum of Org. Array */
