@@ -29,10 +29,8 @@ function subtractNumbers(){
 
 document.querySelector('#subtractNumbers').addEventListener('click', subtractNumbers);
 
-/* Arrow Function - Multiply Numbers */
-function multiply(number1, number2){
-    return number1 * number2;
-}
+/* Function Expression - Multiply Numbers */
+let multiply = (num1,num2) => num1 * num2;
 
 function multiplyNumbers(){
     let multNumber1 = Number(document.querySelector('#factor1').value);
@@ -42,7 +40,6 @@ function multiplyNumbers(){
 }
 
 document.querySelector('#multiplyNumbers').addEventListener('click', multiplyNumbers);
-//document.querySelector('#subtractNumbers').addEventListener('click', (a,b) => document.querySelector('#product').value = multiply(multNumber1, multNumber2) );
 
 /* Open Function Use - Divide Numbers */
 function divide(number1, number2){
@@ -74,9 +71,11 @@ document.getElementById('array').innerHTML = numbersArray;
 let odds = numbersArray.filter((n) => n % 2 == 1)
 document.getElementById('odds').innerHTML = odds;
 /* Output Evens Only Array */
-
+document.getElementById('evens').innerHTML = numbersArray.filter(number => number % 2 === 0);
 /* Output Sum of Org. Array */
-
+document.getElementById('sumOfArray').innerHTML = numbersArray.reduce((sum, number) => sum + number);
 /* Output Multiplied by 2 Array */
-
+document.getElementById('multiplied').innerHTML = numbersArray.map(number => number * 2);
 /* Output Sum of Multiplied by 2 Array */
+let multipliedArray = numbersArray.map(number => number * 2);
+document.getElementById('sumOfMultiplied').innerHTML = multipliedArray.reduce((sum, number) => sum + number);
