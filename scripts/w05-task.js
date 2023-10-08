@@ -35,10 +35,30 @@ const getTemples = async () => {
 }
 
 /* reset Function */
-
+function reset(){
+    let parent = document.getElementById('temples');
+    while (parent.firstChild){
+        parent.removeChild(parent.firstChild);
+    }
+}
 
 /* sortBy Function */
-
+function sortBy(temples){
+    reset();
+    let filter = document.getElementById('sortBy').innerHTML;
+    switch(filter){
+        case "utah":
+            displayTemples();
+            break;
+        case "notutah":
+            break;
+        case "older":
+            break;
+        case "all":
+            getTemples();
+            break;
+    }
+}
 
 
 getTemples();
