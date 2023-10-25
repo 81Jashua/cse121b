@@ -6,6 +6,7 @@ let favDogs = [];
 let dog = '';
 document.getElementById("searchBtn").addEventListener('click', getDogType);
 document.getElementById("favoriteBtn").addEventListener('click', addFavorite);
+
 let options = {
     method: 'GET',
     headers: { 'x-api-key': 'q+zNrzUAjK/k0BOwxHFWww==rgrhTdojd1pvQPaM' }
@@ -80,6 +81,19 @@ function resetFav(){
     let parent = document.getElementById("favoriteDogs");
     while (parent.firstChild){
         parent.removeChild(parent.firstChild);
+    }
+}
+
+function guessFavorite()
+{
+    guess = document.getElementById("myFavoriteDog").value;
+    if (guess == "australian shepherd")
+    {
+        document.getElementById('myFavTxt').innerHTML = "You guessed right!";
+    }
+    else
+    {
+        document.getElementById('myFavTxt').innerHTML = "Try again";
     }
 }
 
